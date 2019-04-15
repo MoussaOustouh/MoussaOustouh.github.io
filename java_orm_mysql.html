@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="images/favicon.png" type="images/png">
+    <link rel="shortcut icon" href="images/favicon.png" type="images/png">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="JS/JS.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/CSS.css">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+	<!-- Enlighter syntax JAVA highlighter -->
+	<link href='EnlighterJS/font-css.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="EnlighterJS/EnlighterJS.min.css" />
+    <link rel="stylesheet" type="text/css" href="EnlighterJS/Eclipse.css" />
+    <script type="text/javascript" src="EnlighterJS/MooTools.min.js"></script>
+    <script type="text/javascript" src="EnlighterJS/EnlighterJS.min.js"></script>
+
+    <meta name="EnlighterJS" content="Advanced javascript based syntax highlighting" data-language="java" data-indent="2" data-selector-block="pre" data-selector-inline="code" />
+
+
+    <style type="text/css">
+    	.enlighterEnlighterJS {
+		    font-weight: bold;
+    	}
+    	.enlighterEnlighterJS .kw1 {
+    		color: #7f0055;
+    	}
+    	.enlighterEnlighterJS .kw2 {
+    		color: #000000;
+    	}
+    	.enlighterEnlighterJS .kw3 {
+		    color: #7f0055;
+		}
+		.enlighterEnlighterJS .st0, .enlighterEnlighterJS .st1, .enlighterEnlighterJS .st2 {
+		    color: #2a00ff;
+		}
+		.enlighterEnlighterJS .co1, .enlighterEnlighterJS .co2 {
+		    color: #3f7f5f;
+		}
+		.enlighterEnlighterJS .me0, .enlighterEnlighterJS .me1 {
+		    color: #000000;
+		}
+		ol.enlighterEnlighterJS li.specialline, ul.enlighterEnlighterJS li.specialline {
+		    background-color: #e8f2fe;
+		}
+
+    </style>
+
+	<title>Moussa OUSTOUH - JAVA Mini ORM MySQL</title>
+</head>
+<body class="body1" title="JAVA - Mini Object-Relational Mapping for MySQL SGBDR">
+
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=698847193500720&autoLogAppEvents=1"></script>
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-lg rounded" style="z-index: 1000;" id="nav" role="" role2="">
+	  <a class="navbar-brand" href="https://moussaoustouh.github.io/">
+	  	<img src="images/logo.png" width="40" height="46" alt="MO">
+	 	Moussa OUSTOUH
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="">
+	  	<hr>
+	    <ul class="navbar-nav ml-auto" style="margin-right: 20%;">
+	      <li class="nav-item">
+	        <a class="nav-link simple-nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+	      </li>
+	      <li class="nav-item dropdown active">
+	        <a class="nav-link dropdown-toggle menu-parent" href="#" id="APIs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          <i class="fas fa-tools"></i> APIs
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="APIs" id="APIs-menu" style="position: absolute;">
+	        	
+	        	<a class="dropdown-toggle dropdown-item dropdown-parent dropdown_parent sub-parent active" href="#" id="JAVA" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          		<i class="fab fa-java fa-lg"></i> JAVA
+	        	</a>
+		        	<div class="dropdown-menu dropdown-submenu" aria-labelledby="JAVA" id="JAVA-menu" style="position: absolute;">
+		        		<a class="dropdown-item active" href="#"><i class="fas fa-database"></i> Mini ORM MySQL</a>
+	        		</div>
+
+	        		
+	        </div>
+	      </li>
+	      <li class="nav-item">
+	          <a class="nav-link simple-nav-link" href="#" data-toggle="modal" data-target="#aboutUsModal"><i class="fas fa-info-circle"></i> About us</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div>
+		<div class="div-title-page">
+			<div>
+				<h2><p>JAVA - Mini Object-Relational Mapping for MySQL SGBDR</h2>
+			</div>
+		</div>
+
+
+		<div class="row" style="padding: 5% 10% 5% 10%; margin: 0px; background-color: white;">
+	      <div class="col-md-7 col-sm-12 align-self-center">
+	        <div class="block">
+	          <div class="section-title" style="max-width: 436px; margin-left: auto; margin-right: auto;">
+	            <h4>What is an ORM ?</h4>
+	            <p>
+	            	Object-Relational Mapping (ORM) in computer science is a programming technique for converting data between incompatible type systems using object-oriented programming languages. This creates, in effect, a "virtual object database" that can be used from within the programming language.
+	            </p>
+	            <p>
+	            	Allows to manipulate databases with predefined methods.
+	            </p>
+	          </div>
+	        </div>
+	      </div><!-- .col-md-7 close -->
+	      <div class="col-md-5 col-sm-12 align-self-center" style="max-width: 400px;">
+	        <div class="block align-self-center" style="padding-left: 7%;">
+	          <img src="images/java/orm/orm1.png" id="orm1" alt="ORM" style="width: 90%; margin-left: auto; margin-right: auto;">
+	        </div>
+	      </div><!-- .col-md-5 close -->
+	    </div>
+
+	 	<div style="background-color: rgba(98, 58, 180, 0.85); color: white; padding: 5% 10% 5% 10%; margin: 0px;">
+		            <h4>How to use our ORM ?</h4>
+			<div class="row" style="">
+		      	<div class="col-md-7 col-sm-12 align-self-center">
+		        	<div class="block">
+		          		<div class="section-title" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+		            		<ol style="padding-left: 20px;">
+		            			<li style="margin-bottom: 5px;">
+		            				<b>Create your own JAVA project (In our case we're using Eclipse IDE)</b>
+		            			</li>
+		            			<li>
+		            				<b>Add the JAR files</b>
+		            				<ul style="list-style: disc; padding-left: 15px; width: 100%;">
+		            					<li>
+		            						"<span style="text-decoration: underline; font-style: italic;">mysql-connector-java-5.1.6-bin.jar </span>"
+		            						MySQL Database Connector <a href="#download" data-toggle="tooltip" title="Download" class="text-warning" style="text-indent: 0.5cm;"><i class="fas fa-file-download fa-lg"></i></a>
+		            					</li>
+		            					<li>
+		            						"<span style="text-decoration: underline; font-style: italic;">MoussaOUSTOUH-ORM-MySQL-(v1.0).jar </span>"
+		            						Our ORM JAR files <a href="#download" data-toggle="tooltip" title="Download" class="text-warning" style="text-indent: 0.5cm;"><i class="fas fa-file-download fa-lg"></i></a>
+		            					</li>
+		            				</ul>
+		            			</li>
+		            		</ol> 
+		          		</div>
+		        	</div>
+		      	</div><!-- .col-md-7 close -->
+		      	<div class="col-md-5 col-sm-12 align-self-center" style="max-width: 500px;">
+		        	<div class="block align-self-center">
+		          		<img src="images/java/orm/orm3.png" id="" alt="ORM" style="width: 100%; margin-left: auto; margin-right: auto;">
+		        	</div>
+		      	</div><!-- .col-md-5 close -->
+
+		    	<div class="col-md-7 col-sm-12 align-self-center" style="margin-top: 35px;">
+		    		<div class="block">
+		        		<div class="section-title" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+		            		<ol start="3" style="padding-left: 20px;">
+		            			<li><b>Create a JAVA class to use our ORM (In our case "Main.java")</b></li>
+		          			</ol>
+		        		</div>
+		        	</div>
+		      	</div>
+		    </div>
+
+		    <div class="row" style="">
+		      	<div class="col-md-7 col-sm-12 align-self-center">
+					<pre data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="16-18" class="mo_code_copy">
+package pkg1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import MO.ORM.mySQL.MoussaOUSTOUH;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Connection con=DriverManager.getConnection(db, user, pass);
+
+			//MoussaOUSTOUH.ORMv1(con, "package1");
+			//MoussaOUSTOUH.ORMv1(con, "package1\\package2");
+			MoussaOUSTOUH.ORMv1(con, "package1.package2");
+			
+		} catch (Exception e) { e.printStackTrace(); } 
+	}
+}
+					</pre>
+					<script type="text/javascript">
+						mo_code_copy();
+					</script>
+
+		      	</div><!-- .col-md-7 close -->
+		      	<div class="col-md-5 col-sm-12 align-self-center" style="max-width: 500px;"><div class="block">
+		          		<div class="section-title" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+		            		<ul style="padding-left: 20px; list-style: disc;">
+		            			<li style="margin-bottom: 5px;">
+		            				<b>Create a database connection with MySQL database</b>
+		            				<ul style="list-style: square;">
+		            					<li><b>db</b> : database URL</li>
+		            					<li><b>user</b> : username</li>
+		            					<li><b>pass</b> : password</li>
+		            				</ul>
+		            			</li>
+		            			<li>
+		            				<b>Then use our ORM static method as it show in the line 16, 17 or 18.</b>
+		            				<br>
+		            				This method has 2 arguments :
+		            				<ol style=" width: 100%;">
+		            					<li>
+		            						Database connection that we had created in the previous step.
+		            					</li>
+		            					<li>
+		            						The package where we gonna generate the modules and the DAOs
+		            					</li>
+		            				</ol>
+		            			</li>
+		            			<li>
+		            				<b>Run it to generate your database modules and DAOs.</b>
+		            			</li>
+		            		</ul> 
+		          		</div>
+		        	</div>
+		      	</div><!-- .col-md-5 close -->
+		    </div>
+	 	</div>
+
+
+
+
+	 	<div style="background-color: white; color: black; padding: 5% 10% 5% 10%; margin: 0px;">
+		            <h4>Modules and DAO modules ?</h4>
+			<div class="row" style="">
+		      	<div class="col-md-7 col-sm-12 align-self-center">
+		        	<div class="block">
+		          		<div class="section-title" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+		          			<b><p>After running it, 2 package will generated in the package you choose in the previous step.</p></b>
+		            		<ol style="padding-left: 20px;">
+		            			<li style="margin-bottom: 5px;">
+		            				<b>Modules package "module"</b>
+		            				<div>
+		            					<p>Contains the representation of the database tables as JAVA classes.</p>
+		            					Every table attribute represent as a class attribute with the setter and the getter.
+		            					<br>
+		            					<img src="images/java/orm/orm6.png" class="orm6">
+		            				</div>
+		            				<br>
+		            			</li>
+		            			<li>
+		            				<b>DAOs package "dao"</b>
+		            				<div>
+		            					<p>Contains the data access object which contains the methods to interact the object with the database.</p>
+		            					Every DAO class contains 5 methods
+		            					<ul style="list-style: disc; font-size: 14px;">
+		            						<li>insert(arg1)</li>
+		            						<li>update(arg1, arg2)</li>
+		            						<li>delete(arg1)</li>
+		            						<li>find(arg1, arg2)</li>
+		            						<li>findAll(arg1, arg2)</li>
+		            					</ul>
+		            				</div>
+		            			</li>
+		            		</ol> 
+		          		</div>
+		        	</div>
+		      	</div><!-- .col-md-7 close -->
+		      	<div class="col-md-5 col-sm-12 align-self-center" style="max-width: 500px;">
+		        	<div class="block align-self-center">
+		          		<img src="images/java/orm/orm5.png" id="" alt="ORM" style="width: 100%; margin-left: auto; margin-right: auto;">
+		        	</div>
+		      	</div><!-- .col-md-5 close -->
+		    </div>
+	 	</div>
+
+
+
+
+	 	<div style="background-color: rgba(220, 53, 69, 0.69); color: white; padding: 5% 5% 5% 5%; margin: 0px;">
+		            <h4>How to use DAO methods ?</h4>
+			<div class="row" style="">
+		      	<div class="col-md-6 col-sm-12 align-self-top">
+		        	<div class="block">
+		            		<ul style="padding-left: 20px; margin-bottom: 0px;">
+		            			<li style="margin-bottom: 5px;">
+		            				<b>insert(arg1)</b>
+		            			</li>
+		            		</ul>
+
+		            		<pre data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="17-23" class="mo_code_copy">
+package pkg1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import package1.package2.dal.PersonDAO;
+import package1.package2.module.Person;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Connection con=DriverManager.getConnection(db, user, pass);
+			
+			Person person=new Person();
+			person.setId(1);
+			person.setFirst_name("Moussa");
+			person.setLast_name("Oustouh");
+			
+			PersonDAO personDAO=new PersonDAO(con);
+			personDAO.insert(person);
+		} catch (Exception e) { e.printStackTrace(); }
+	}
+}
+		            		</pre>
+
+		        	</div>
+		      	</div><!-- .col-md-7 close -->
+		      	<div class="col-md-6 col-sm-12 align-self-top">
+		        	<div class="block">
+		          		<ul style="padding-left: 20px; margin-bottom: 0px;">
+	            			<li style="margin-bottom: 5px;">
+	            				<b>update(arg1, arg2)</b>
+	            			</li>
+	            		</ul>
+
+		            		<pre data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="17-23" class="mo_code_copy">
+package pkg1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import package1.package2.dal.PersonDAO;
+import package1.package2.module.Person;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Connection con=DriverManager.getConnection(db, user, pass);
+			
+			Person person=new Person();
+			person.setId(1);
+			person.setFirst_name("Moussa");
+			person.setLast_name("OUSTOUH");
+			
+			PersonDAO personDAO=new PersonDAO(con);
+			personDAO.update(person, "id=1"); //update(object, "The SQL WHERE Clause");
+		} catch (Exception e) { e.printStackTrace(); }
+	}
+}
+		            		</pre>
+		        	</div>
+		      	</div><!-- .col-md-5 close -->
+		    </div>
+
+
+		    <div class="row" style="">
+		      	<div class="col-md-6 col-sm-12 align-self-top">
+		        	<div class="block">
+		            		<ul style="padding-left: 20px; margin-bottom: 0px;">
+		            			<li style="margin-bottom: 5px;">
+		            				<b>delete(arg1)</b>
+		            			</li>
+		            		</ul>
+
+		            		<pre data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="17-18" class="mo_code_copy">
+package pkg1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import package1.package2.dal.PersonDAO;
+import package1.package2.module.Person;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Connection con=DriverManager.getConnection(db, user, pass);
+			
+			PersonDAO personDAO=new PersonDAO(con);
+			personDAO.delete("id &gt; 1"); //delete("The SQL WHERE Clause");
+		} catch (Exception e) { e.printStackTrace(); }
+	}
+}
+		            		</pre>
+
+		        	</div>
+		      	</div><!-- .col-md-7 close -->
+		      	<div class="col-md-6 col-sm-12 align-self-top">
+		        	<div class="block">
+		          		<ul style="padding-left: 20px; margin-bottom: 0px;">
+	            			<li style="margin-bottom: 5px;">
+	            				<b>find(arg1, arg2)</b>
+	            			</li>
+	            		</ul>
+
+		            		<pre data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="17-19" class="mo_code_copy">
+package pkg1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import package1.package2.dal.PersonDAO;
+import package1.package2.module.Person;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Connection con=DriverManager.getConnection(db, user, pass);
+			
+			PersonDAO personDAO=new PersonDAO(con);
+			//find("The SQL WHERE clause", "The SQL ORDER BY clause");
+			Person person=personDAO.find("first_name='Moussa'", "order by id desc"); 
+		} catch (Exception e) { e.printStackTrace(); }
+	}
+}
+		            		</pre>
+		        	</div>
+		      	</div><!-- .col-md-5 close -->
+		    </div>
+
+
+		    <div class="row" style="">
+		      	<div class="col-md-6 col-sm-12 align-self-top">
+		        	<div class="block">
+		            		<ul style="padding-left: 20px; margin-bottom: 0px;">
+		            			<li style="margin-bottom: 5px;">
+		            				<b>findAll(arg1, arg2)</b>
+		            			</li>
+		            		</ul>
+
+		            		<pre data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="18-20" class="mo_code_copy">
+package pkg1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Vector;
+
+import package1.package2.dal.PersonDAO;
+import package1.package2.module.Person;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Connection con=DriverManager.getConnection(db, user, pass);
+			
+			PersonDAO personDAO=new PersonDAO(con);
+			//find("The SQL WHERE clause", "The SQL ORDER BY clause");
+			Vector&lt;Person&gt; persons=personDAO.findAll("id > 3", "order by id desc"); 
+		} catch (Exception e) { e.printStackTrace(); }
+	}
+}
+		            		</pre>
+
+		        	</div>
+		      	</div><!-- .col-md-7 close -->
+		      	<div class="col-md-6 col-sm-12 align-self-top">
+		        	<div class="block">
+		            		<ul style="padding-left: 20px; margin-bottom: 0px;">
+		            			<li style="margin-bottom: 5px;">
+		            				<b>QuerySQL.java { executeSQL(arg1) / executeQuerySQL(arg1) }</b>
+		            			</li>
+		            		</ul>
+
+		            		<pre data-enlighter-language="java" data-enlighter-theme="" data-enlighter-highlight="20-25" class="mo_code_copy">
+package pkg1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.util.Vector;
+
+import package1.package2.dal.PersonDAO;
+import package1.package2.dal.QuerySQL;
+import package1.package2.module.Person;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Connection con=DriverManager.getConnection(db, user, pass);
+			
+			QuerySQL querySQL=new QuerySQL(con);
+			//this method could execute any request SQL, it work like a setter without return
+			querySQL.exequteSQL("delete from person where id=36");
+
+			//this method could execute any request SQL, it work like a getter with a ResultSet return
+			ResultSet rs=querySQL.executeQuerySQL("select * from person");
+		} catch (Exception e) { e.printStackTrace(); }
+	}
+}
+		            		</pre>
+
+		        	</div>
+		      	</div><!-- .col-md-5 close -->
+		    </div>
+
+
+
+	 	</div>
+
+
+	 	<div style="background-color: white; color: black; padding: 5% 10% 5% 10%; margin: 0px;" id="download">
+		    <div align="center" style="margin-bottom: 40px;">
+		    	<h4>Download</h4>
+		    	<a href="#" target="_blank" class="btn btn-primary btn-sm">Link 1</a>
+		    	<a href="#" target="_blank" class="btn btn-primary btn-sm">Link 2</a>
+		    </div>
+
+		    <div id="fb_buttons" align="center">
+		    	<div class="fb-like" data-href="https://moussaoustouh.github.io/java_orm_mysql.html" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div>
+		    	<div class="fb-share-button" data-href="https://moussaoustouh.github.io/java_orm_mysql.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmoussaoustouh.github.io%2Fjava_orm_mysql.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+		    	<br>
+		    	<div class="fb-comments" data-href="https://moussaoustouh.github.io/java_orm_mysql.html" data-numposts="3"></div>
+		    </div>
+		</div>
+
+	</div>
+
+	<div class="info-div2">
+		<center>
+			<div class="copyright" style="margin-top: 15px; text-align: center;"><span style="color: #919191;">Copyright © </span>Moussa OUSTOUH</div>
+		</center>
+	</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">About us</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	      	<p>
+	      		My name is Moussa OUSTOUH, i'm a software developer
+	      	</p>
+	        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook fa-lg facebook-link"></i></a> /m0ussa0ustouh
+	        <br>
+	        <i class="fas fa-envelope fa-lg gmail"></i> oustouh.moussa@gmail.com
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script type="text/javascript">
+		if (window.innerWidth < 768) {
+			$("#orm1").attr("src", "images/java/orm/orm2.png");
+		}
+		else {
+			$("#orm1").attr("src", "images/java/orm/orm1.png");
+		}
+
+		$(window).resize(function(){
+			if (window.innerWidth < 768) {
+				$("#orm1").attr("src", "images/java/orm/orm2.png");
+			}
+			else {
+				$("#orm1").attr("src", "images/java/orm/orm1.png");
+			}
+		});
+
+		$(document).ready(function(){
+		  $('[data-toggle="tooltip"]').tooltip();   
+		});
+	</script>
+
+</body>
+</html>
