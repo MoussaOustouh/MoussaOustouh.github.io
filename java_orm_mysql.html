@@ -118,10 +118,10 @@
 	          <div class="section-title" style="max-width: 436px; margin-left: auto; margin-right: auto;">
 	            <h4>What is an ORM ?</h4>
 	            <p>
-	            	Object-Relational Mapping (ORM) in computer science is a programming technique for converting data between incompatible type systems using object-oriented programming languages. This creates, in effect, a "virtual object database" that can be used from within the programming language.
+	            	Object-Relational Mapping (ORM) in computer science is a programming technique for converting data between databases and programming languages (using object-oriented programming languages). This creates database controllers, that can be used in the programming languages.
 	            </p>
 	            <p>
-	            	Allows to manipulate databases with predefined methods.
+					Allows to manipulate databases data with predefined methods.
 	            </p>
 	          </div>
 	        </div>
@@ -147,11 +147,11 @@
 		            				<b>Add the JAR files</b>
 		            				<ul style="list-style: disc; padding-left: 15px; width: 100%;">
 		            					<li>
-		            						"<span style="text-decoration: underline; font-style: italic;">mysql-connector-java-5.1.6-bin.jar </span>"
+		            						"<span style="text-decoration: underline; font-style: italic;">mysql-connector-java-8.0.13.jar </span>"
 		            						MySQL Database Connector <a href="#download" data-toggle="tooltip" title="Download" class="text-warning" style="text-indent: 0.5cm;"><i class="fas fa-file-download fa-lg"></i></a>
 		            					</li>
 		            					<li>
-		            						"<span style="text-decoration: underline; font-style: italic;">MoussaOUSTOUH-ORM-MySQL-(v1.0).jar </span>"
+		            						"<span style="text-decoration: underline; font-style: italic;">MoussaOUSTOUH-ORM-MySQL-(v1.2).jar </span>"
 		            						Our ORM JAR files <a href="#download" data-toggle="tooltip" title="Download" class="text-warning" style="text-indent: 0.5cm;"><i class="fas fa-file-download fa-lg"></i></a>
 		            					</li>
 		            				</ul>
@@ -191,8 +191,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm?serverTimezone=UTC", user="root", pass="";
 			Connection con=DriverManager.getConnection(db, user, pass);
 
 			//MoussaOUSTOUH.ORMv1(con, "package1");
@@ -316,8 +316,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm?serverTimezone=UTC", user="root", pass="";
 			Connection con=DriverManager.getConnection(db, user, pass);
 			
 			Person person=new Person();
@@ -355,8 +355,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm?serverTimezone=UTC", user="root", pass="";
 			Connection con=DriverManager.getConnection(db, user, pass);
 			
 			Person person=new Person();
@@ -397,8 +397,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm?serverTimezone=UTC", user="root", pass="";
 			Connection con=DriverManager.getConnection(db, user, pass);
 			
 			PersonDAO personDAO=new PersonDAO(con);
@@ -431,8 +431,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm?serverTimezone=UTC", user="root", pass="";
 			Connection con=DriverManager.getConnection(db, user, pass);
 			
 			PersonDAO personDAO=new PersonDAO(con);
@@ -470,8 +470,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm?serverTimezone=UTC", user="root", pass="";
 			Connection con=DriverManager.getConnection(db, user, pass);
 			
 			PersonDAO personDAO=new PersonDAO(con);
@@ -508,8 +508,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String db="jdbc:mysql://localhost:3306/test_orm", user="root", pass="";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String db="jdbc:mysql://localhost:3306/test_orm?serverTimezone=UTC", user="root", pass="";
 			Connection con=DriverManager.getConnection(db, user, pass);
 			
 			QuerySQL querySQL=new QuerySQL(con);
