@@ -111,6 +111,19 @@
 			</div>
 		</div>
 
+		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+			<strong><u>Version 2.1</u></strong>
+			<div>
+				Now you can chose between using '<b>Vectore</b>' or '<b>ArrayList</b>' as a collection for '<b>objectDAO.findAll(arg1, arg2)</b>' method.
+				<ul>
+					<li>MoussaOUSTOUH.<i><b>ORMv1</b></i>(con, package) : will use 'Vector' as collection of objects.</li>
+					<li>MoussaOUSTOUH.<i><b>ORMv2</b></i>(con, package) : will use 'ArrayList' as collection of objects.</li>
+				</ul>
+			</div>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			  	<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
 
 		<div class="row" style="padding: 5% 10% 5% 10%; margin: 0px; background-color: white;">
 	      <div class="col-md-7 col-sm-12 align-self-center">
@@ -151,7 +164,7 @@
 		            						MySQL Database Connector <a href="#download" data-toggle="tooltip" title="Download" class="text-warning" style="text-indent: 0.5cm;"><i class="fas fa-file-download fa-lg"></i></a>
 		            					</li>
 		            					<li>
-		            						"<span style="text-decoration: underline; font-style: italic;">MoussaOUSTOUH-ORM-MySQL-(v1.2).jar </span>"
+		            						"<span style="text-decoration: underline; font-style: italic;">MoussaOUSTOUH-ORM-MySQL-(v2.1).jar </span>"
 		            						Our ORM JAR files <a href="#download" data-toggle="tooltip" title="Download" class="text-warning" style="text-indent: 0.5cm;"><i class="fas fa-file-download fa-lg"></i></a>
 		            					</li>
 		            				</ul>
@@ -197,7 +210,8 @@ public class Main {
 
 			//MoussaOUSTOUH.ORMv1(con, "package1");
 			//MoussaOUSTOUH.ORMv1(con, "package1\\package2");
-			MoussaOUSTOUH.ORMv1(con, "package1.package2");
+			MoussaOUSTOUH.ORMv1(con, "package1.package2");  //ORMv1 will use 'Vector' as collection of objects
+			// MoussaOUSTOUH.ORMv2(con, "package1.package2");  //ORMv2 will use 'ArrayList' as collection of objects
 			
 		} catch (Exception e) { e.printStackTrace(); } 
 	}
@@ -462,6 +476,7 @@ package pkg1;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Vector;
+import java.util.ArrayList;
 
 import package1.package2.dal.PersonDAO;
 import package1.package2.module.Person;
@@ -476,7 +491,12 @@ public class Main {
 			
 			PersonDAO personDAO=new PersonDAO(con);
 			//find("The SQL WHERE clause", "The SQL ORDER BY clause");
-			Vector&lt;Person&gt; persons=personDAO.findAll("id > 3", "order by id desc"); 
+
+			//MoussaOUSTOUH.ORMv1(con, package) will use 'Vector' as collection of objects
+			Vector&lt;Person&gt; persons=personDAO.findAll("id > 3", "order by id desc");
+
+			//MoussaOUSTOUH.ORMv2(con, package) will use 'ArrayList' as collection of objects
+			ArrayList&lt;Person&gt; persons=personDAO.findAll("id > 3", "order by id desc");
 		} catch (Exception e) { e.printStackTrace(); }
 	}
 }
@@ -498,7 +518,6 @@ package pkg1;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.util.Vector;
 
 import package1.package2.dal.PersonDAO;
 import package1.package2.dal.QuerySQL;
